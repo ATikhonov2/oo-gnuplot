@@ -1,7 +1,6 @@
-gnuplot = "\"\"C:\\Program Files\\@\\gnuplot\\bin\\gnuplot.exe\""
+gnuplot = 'C:\Program Files\@\gnuplot\bin\gnuplot.exe'
 
 commands = ''
-
 do for [i=1:strlen(ARG1)] {
     c = ARG1[i:i]
     if (c eq '"') {
@@ -9,6 +8,7 @@ do for [i=1:strlen(ARG1)] {
     }
     commands = commands . c
 }
-
-cmd = sprintf('%s -e "%s" ', gnuplot, commands)
+# The double quotes before the first argument are
+# essential.
+cmd = sprintf('""%s" -e "%s"', gnuplot, commands)
 system( cmd )
