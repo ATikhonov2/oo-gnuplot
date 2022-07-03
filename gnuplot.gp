@@ -1,3 +1,5 @@
+# Examples:
+# call 'gnuplot.gp' 'print "Hello, world!"'
 gnuplot = 'C:\Program Files\@\gnuplot\bin\gnuplot.exe'
 
 commands = ''
