@@ -1,4 +1,4 @@
-# Let gnuplot.exe be on the path.
+# Let gnuplot executable be on the path.
 # In PowerShell
 #     [System.Environment]::SetEnvironmentVariable('PATH', 'C:\Program Files\gnuplot\bin;' + $env:Path)
 # In CMD
@@ -17,5 +17,5 @@ do for [i=1:strlen(ARG1)] {
 }
 # The double quotes before the first argument are
 # essential.
-cmd = sprintf('gnuplot.exe -e "%s"', commands)
+cmd = sprintf('gnuplot -e "%s"', commands)
 system( cmd )
